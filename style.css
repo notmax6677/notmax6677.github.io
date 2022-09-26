@@ -1,0 +1,161 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* variables */
+:root {
+    --highlight_col1: #e27474;
+
+    --highlight_col2: #e09865;
+
+    --body-col: #383838;
+
+    --header-footer-col: transparent;
+}
+
+/* set defaults for every element */
+* {
+    font-family: 'Roboto';
+}
+
+/* some general css settings */
+.spacer {
+    width: 100%;
+    height: 1em;
+}
+
+a {
+    text-decoration: underline;
+    color: var(--highlight_col1);
+
+    padding: 0.1em;
+    margin: -0.1em;
+}
+a:hover {
+    background: var(--highlight_col1);
+    text-decoration: none;
+    color: #000000;
+}
+
+/* standard few settings for body */
+body {
+    margin: 0;
+
+    background: var(--body-col);
+
+    color: #ffffff;
+}
+
+/* header section */
+
+header {
+    width: 100%;
+    height: fit-content;
+
+    background: var(--header-footer-col);
+}
+
+#title {
+    text-align: center;
+    margin: 0;
+}
+
+#profile-image {
+    position: relative;
+    
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 15%;
+
+    border-radius: 100%;
+}
+
+#github-contact-container {
+    text-align: center;
+}
+#github-contact {
+    position: relative;
+
+    background-color: var(--highlight_col1);
+    padding: 0.5em;
+    border-radius: 2px;
+
+    font-family: 'Roboto Mono';
+    color: #000000;
+    text-decoration: none;
+
+    animation: github-contact-hover-off 0.2s;
+}
+#github-contact:hover {
+    text-decoration: underline;
+
+    background-color: var(--highlight_col2);
+
+    animation: github-contact-hover-on 0.2s;
+}
+
+/* content section */
+#content {
+    position: relative;
+
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 50%;
+
+    background: var(--header-footer-col);
+
+    padding: 1em;
+}
+#content > p {
+    width: 90%;
+}
+
+#stats-images-container {
+    display: flex;
+    flex-direction: ltr;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* footer section */
+footer {
+    width: 100%;
+
+    height: fit-content;
+
+    background: var(--header-footer-col);
+}
+
+#footer-text-container {
+    display: flex;
+    flex-direction: ltr;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+#footer-text-container > * {
+    margin: 0;
+}
+
+#name-copyright > span {
+    color: var(--highlight_col1);
+}
+
+/* keyframes */
+@keyframes github-contact-hover-on {
+    from {
+        background-color: var(--highlight_col1);
+    }
+    to {
+        background-color: var(--highlight_col2);
+    }
+}
+@keyframes github-contact-hover-off {
+    from {
+        background-color: var(--highlight_col2);
+    }
+    to {
+        background-color: var(--highlight_col1);
+    }
+}
