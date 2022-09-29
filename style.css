@@ -191,8 +191,19 @@ footer {
     /* reduce size of stat images to fit screen and increase bottom margin by a bit */
     #stats-images-container > * {
         width: 90vw;
+        max-width: 400px;
 
         margin-bottom: 1em;
+    }
+
+    /* auto-wrap footer */
+    #footer-text-container {
+        flex-direction: column;
+    }
+
+    /* center align footer text */
+    #footer-text-container {
+        text-align: center;
     }
 
     /* slightly increase the footer's page-repository-link's bottom margin to create a bit of spacing between it and the copyright */
