@@ -119,6 +119,12 @@ header {
     justify-content: space-evenly;
 }
 
+#cssbattle-link {
+    text-align: center;
+
+    font-weight: bold;
+}
+
 /* footer section */
 footer {
     width: 100%;
@@ -131,7 +137,7 @@ footer {
 #footer-text-container {
     display: flex;
     flex-direction: ltr;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 #footer-text-container > * {
@@ -157,5 +163,40 @@ footer {
     }
     to {
         background-color: var(--highlight_col1);
+    }
+}
+
+/* mobile porting */
+@media screen and (orientation: portrait) {
+    /* center align all h2s */
+    h2 {
+        text-align: center;
+    }
+
+    /* slightly increase spacer size */
+    .spacer {
+        height: 1.5em;
+    }
+
+    /* increase profile image size */
+    #profile-image {
+        width: 50%;
+    }
+
+    /* increase width of content */
+    #content {
+        width: 80%;
+    }
+
+    /* reduce size of stat images to fit screen and increase bottom margin by a bit */
+    #stats-images-container > * {
+        width: 90vw;
+
+        margin-bottom: 1em;
+    }
+
+    /* slightly increase the footer's page-repository-link's bottom margin to create a bit of spacing between it and the copyright */
+    #page-repository-link {
+        margin-bottom: 0.5em;
     }
 }
